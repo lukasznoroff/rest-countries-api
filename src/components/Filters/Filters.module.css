@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+  @media screen and (max-width: 730px) {
+    display: block;
+  }
+}
+
+.input_wrapper {
+  display: flex;
+  width: 30rem;
+  padding: 1rem 1rem;
+  border-radius: var(--border-radius);
+  background: var(--color-element);
+  box-shadow: var(--element-shadow);
+  color: var(--color-text);
+
+  @media screen and (max-width: 900px) {
+    width: 10rem;
+  }
+  @media screen and (max-width: 800px) {
+    margin-bottom: 2rem;
+  }
+  input {
+    background-color: transparent;
+    border: 0px solid;
+    width: 100%;
+  }
+  ::placeholder {
+    color: var(--color-text);
+  }
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+  .icon {
+    margin-right: 0.5rem;
+  }
+}
+
+.selected_option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  background-color: var(--color-element);
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.select_wrapper {
+  width: 10rem;
+  select {
+    border-radius: var(--border-radius);
+    background: var(--color-element);
+    box-shadow: var(--element-shadow);
+    background-color: transparent;
+    border: 0px solid;
+    cursor: pointer;
+  }
+}
+
+.options {
+  width: 10rem;
+  position: absolute;
+  margin-top: 0.5rem;
+  padding: 1rem 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--color-element);
+  color: var(--color-text);
+  list-style-type: none;
+  cursor: pointer;
+}
+li {
+  padding: 0.5rem 0;
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: rgba(233, 233, 233, 0.688);
+  }
+}
